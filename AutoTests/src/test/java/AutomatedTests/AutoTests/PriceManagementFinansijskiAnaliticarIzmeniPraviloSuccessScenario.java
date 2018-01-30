@@ -1,4 +1,4 @@
-package AutomatedTests.AutoTests.PriceManagementTests;
+package AutomatedTests.AutoTests;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
@@ -19,6 +19,7 @@ public class PriceManagementFinansijskiAnaliticarIzmeniPraviloSuccessScenario {
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
     baseUrl = "http://localhost:4200/";
+    driver.manage().window().maximize();
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
@@ -37,8 +38,8 @@ public class PriceManagementFinansijskiAnaliticarIzmeniPraviloSuccessScenario {
     // click | id=kc-login | 
     driver.findElement(By.id("kc-login")).click();
     Thread.sleep(2000);
-    // click | xpath=(//button[@type='button'])[8] | 
-    driver.findElement(By.xpath("(//button[@type='button'])[8]")).click();
+    // click | xpath=("izmeniPostojecaPravilaIdForTest")[8] | 
+    driver.findElement(By.id("izmeniPostojecaPravilaIdForTest")).click();
     Thread.sleep(2000);
     // type | name=pravila | IZMENJENAPRAVILA
     driver.findElement(By.name("pravila")).clear();

@@ -1,4 +1,4 @@
-package AutomatedTests.AutoTests.PriceManagementTests;
+package AutomatedTests.AutoTests;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
@@ -19,6 +19,7 @@ public class PriceManagementLoginInvalidCredentials {
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
     baseUrl = "http://localhost:4200/";
+    driver.manage().window().maximize();
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 

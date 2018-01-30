@@ -1,4 +1,4 @@
-package AutomatedTests.AutoTests.PriceManagementTests;
+package AutomatedTests.AutoTests;
 
 
 import java.util.regex.Pattern;
@@ -20,6 +20,7 @@ public class PriceManagementFinansijskiAnaliticarDodajCenovnikSuccessScenario {
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
     baseUrl = "http://localhost:4200/";
+    driver.manage().window().maximize();
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
@@ -41,8 +42,8 @@ public class PriceManagementFinansijskiAnaliticarDodajCenovnikSuccessScenario {
     driver.findElement(By.xpath("(//button[@type='button'])[5]")).click();
 
     Thread.sleep(2000);
-    // click | //tr[3]/button | 
-    driver.findElement(By.xpath("//tr[3]/button")).click();
+    // click | //dugme za odabir selektovanog cenovnika 
+    driver.findElement(By.xpath("//tr[2]/button")).click();
     // click | css=button.btn.btn-primary | 
     Thread.sleep(2000);
     driver.findElement(By.id("noviCenovnikIdForTest")).click();

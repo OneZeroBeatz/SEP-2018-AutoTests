@@ -1,5 +1,4 @@
-package AutomatedTests.AutoTests.PriceManagementTests;
-
+package AutomatedTests.AutoTests;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
@@ -7,14 +6,10 @@ import org.junit.*;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
-import org.openqa.selenium.browserlaunchers.locators.GoogleChromeLocator;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.Select;
 
-public class PriceManagementFinansijskiAnaliticarLoginSuccessScenario {
+public class InsurancePointOfSaleRedirectToPriceManagementSuccessScenario {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
@@ -22,27 +17,27 @@ public class PriceManagementFinansijskiAnaliticarLoginSuccessScenario {
 
   @Before
   public void setUp() throws Exception {
-	//if you didn't update the Path system variable to add the full directory path to the executable as above mentioned then doing this directly through code
-	  System.setProperty("webdriver.gecko.driver", "src/test/java/com/sep/pricemanagement/geckodriver/geckodriver32.exe");
-
-	  //WebDriver driver = new MarionetteDriver(capabilities); 
     driver = new FirefoxDriver();
-    baseUrl = "http://localhost:4200/";
+    baseUrl = "http://localhost:4201/";
+    driver.manage().window().maximize();
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   @Test
-  public void testPriceManagementFinansijskiAnaliticarLoginSuccessScenario() throws Exception {
-    // open | /auth/realms/AuthorizationProviderKeycloak/protocol/openid-connect/auth?client_id=login-app-client&redirect_uri=http%3A%2F%2Flocalhost%3A4200%2F&state=e3d49faf-ec09-44e4-8c9d-254978653e38&nonce=b0ba6c37-80ae-4939-ab48-475e7e561c1b&response_mode=fragment&response_type=code&scope=openid | 
-    driver.get(baseUrl + "/auth/realms/AuthorizationProviderKeycloak/protocol/openid-connect/auth?client_id=login-app-client&redirect_uri=http%3A%2F%2Flocalhost%3A4200%2F&state=e3d49faf-ec09-44e4-8c9d-254978653e38&nonce=b0ba6c37-80ae-4939-ab48-475e7e561c1b&response_mode=fragment&response_type=code&scope=openid");
-    // type | id=username | c@c.com
+  public void testInsurancePointOfSaleRedirectToPriceManagementSuccessScenario() throws Exception {
+    // open | /auth/realms/AuthorizationProviderKeycloak/protocol/openid-connect/auth?client_id=login-app-client&redirect_uri=http%3A%2F%2Flocalhost%3A4201%2F&state=f9e5e301-3e95-4a32-a362-e1da542cf891&nonce=b5ed7a2e-2932-45ba-8139-bfb99b096696&response_mode=fragment&response_type=code&scope=openid | 
+    driver.get(baseUrl + "/auth/realms/AuthorizationProviderKeycloak/protocol/openid-connect/auth?client_id=login-app-client&redirect_uri=http%3A%2F%2Flocalhost%3A4201%2F&state=f9e5e301-3e95-4a32-a362-e1da542cf891&nonce=b5ed7a2e-2932-45ba-8139-bfb99b096696&response_mode=fragment&response_type=code&scope=openid");
+    // type | id=username | b@b.com
     driver.findElement(By.id("username")).clear();
-    driver.findElement(By.id("username")).sendKeys("c@c.com");
-    // type | id=password | c
+    driver.findElement(By.id("username")).sendKeys("b@b.com");
+    // type | id=password | b
     driver.findElement(By.id("password")).clear();
-    driver.findElement(By.id("password")).sendKeys("c");
+    driver.findElement(By.id("password")).sendKeys("b");
     // click | id=kc-login | 
     driver.findElement(By.id("kc-login")).click();
+    
+    driver.get("http://localhost:4200/");
+    
     // assertTitle | PriceManagementClient | 
     assertEquals("PriceManagementClient", driver.getTitle());
   }
