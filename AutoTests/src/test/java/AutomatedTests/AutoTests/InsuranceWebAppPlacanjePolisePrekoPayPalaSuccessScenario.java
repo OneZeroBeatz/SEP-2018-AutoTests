@@ -9,7 +9,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class InsuranceWebAppOsiguranjePomociNaPutuPayPallRedirectingSuccessScenario {
+public class InsuranceWebAppPlacanjePolisePrekoPayPalaSuccessScenario {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
@@ -24,7 +24,7 @@ public class InsuranceWebAppOsiguranjePomociNaPutuPayPallRedirectingSuccessScena
   }
 
   @Test
-  public void testInsuranceWebAppOsiguranjePomociNaPutuPayPallRedirectingSuccessScenario() throws Exception {
+  public void testInsuranceWebAppPlacanjePolisePrekoPayPallaSuccessScenario() throws Exception {
     // open | /osiguravajuceKuce | 
     driver.get(baseUrl + "/osiguravajuceKuce");
     // click | link=Sajt | 
@@ -33,35 +33,35 @@ public class InsuranceWebAppOsiguranjePomociNaPutuPayPallRedirectingSuccessScena
     driver.findElement(By.linkText("Kupi osiguranje")).click();
     // click | xpath=(//button[@type='button'])[3] | 
     driver.findElement(By.xpath("(//button[@type='button'])[3]")).click();
-    // type | css=input.form-control | b@b.com
+    // type | css=input.form-control | onezerobeatz@gmail.com
     driver.findElement(By.cssSelector("input.form-control")).clear();
-    driver.findElement(By.cssSelector("input.form-control")).sendKeys("b@b.com");
+    driver.findElement(By.cssSelector("input.form-control")).sendKeys("onezerobeatz@gmail.com");
     // type | //input[@type='TEXT'] | Sasa
     driver.findElement(By.xpath("//input[@type='TEXT']")).clear();
     driver.findElement(By.xpath("//input[@type='TEXT']")).sendKeys("Sasa");
     // type | xpath=(//input[@type='TEXT'])[2] | Momcilovic
     driver.findElement(By.xpath("(//input[@type='TEXT'])[2]")).clear();
     driver.findElement(By.xpath("(//input[@type='TEXT'])[2]")).sendKeys("Momcilovic");
-    // type | //input[@type='NUMBER'] | 8888888888888
+    // type | //input[@type='NUMBER'] | 9999999999999
     driver.findElement(By.xpath("//input[@type='NUMBER']")).clear();
-    driver.findElement(By.xpath("//input[@type='NUMBER']")).sendKeys("8888888888888");
-    // type | xpath=(//input[@type='NUMBER'])[2] | 888
+    driver.findElement(By.xpath("//input[@type='NUMBER']")).sendKeys("9999999999999");
+    // type | xpath=(//input[@type='NUMBER'])[2] | 399393
     driver.findElement(By.xpath("(//input[@type='NUMBER'])[2]")).clear();
-    driver.findElement(By.xpath("(//input[@type='NUMBER'])[2]")).sendKeys("888");
-    // type | xpath=(//input[@type='TEXT'])[3] | 8888
+    driver.findElement(By.xpath("(//input[@type='NUMBER'])[2]")).sendKeys("399393");
+    // type | xpath=(//input[@type='TEXT'])[3] | Ad 32
     driver.findElement(By.xpath("(//input[@type='TEXT'])[3]")).clear();
-    driver.findElement(By.xpath("(//input[@type='TEXT'])[3]")).sendKeys("8888");
-    // type | xpath=(//input[@type='NUMBER'])[3] | 8888888
+    driver.findElement(By.xpath("(//input[@type='TEXT'])[3]")).sendKeys("Ad 32");
+    // type | xpath=(//input[@type='NUMBER'])[3] | 93939393
     driver.findElement(By.xpath("(//input[@type='NUMBER'])[3]")).clear();
-    driver.findElement(By.xpath("(//input[@type='NUMBER'])[3]")).sendKeys("8888888");
+    driver.findElement(By.xpath("(//input[@type='NUMBER'])[3]")).sendKeys("93939393");
     // click | //button[2] | 
     driver.findElement(By.xpath("//button[2]")).click();
-    // type | css=input.form-control | 2013-11-11
+    // type | css=input.form-control | 2014-12-12
     driver.findElement(By.cssSelector("input.form-control")).clear();
-    driver.findElement(By.cssSelector("input.form-control")).sendKeys("2013-11-11");
-    // type | xpath=(//input[@type='DATE'])[2] | 2014-11-11
+    driver.findElement(By.cssSelector("input.form-control")).sendKeys("2014-12-12");
+    // type | xpath=(//input[@type='DATE'])[2] | 2016-12-12
     driver.findElement(By.xpath("(//input[@type='DATE'])[2]")).clear();
-    driver.findElement(By.xpath("(//input[@type='DATE'])[2]")).sendKeys("2014-11-11");
+    driver.findElement(By.xpath("(//input[@type='DATE'])[2]")).sendKeys("2016-12-12");
     // click | //button[3] | 
     driver.findElement(By.xpath("//button[3]")).click();
     // click | //input[@type='radio'] | 
@@ -76,34 +76,49 @@ public class InsuranceWebAppOsiguranjePomociNaPutuPayPallRedirectingSuccessScena
     // type | xpath=(//input[@type='TEXT'])[2] | 307
     driver.findElement(By.xpath("(//input[@type='TEXT'])[2]")).clear();
     driver.findElement(By.xpath("(//input[@type='TEXT'])[2]")).sendKeys("307");
-    // type | //input[@type='NUMBER'] | 2004
+    // type | //input[@type='NUMBER'] | 2003
     driver.findElement(By.xpath("//input[@type='NUMBER']")).clear();
-    driver.findElement(By.xpath("//input[@type='NUMBER']")).sendKeys("2004");
-    // type | xpath=(//input[@type='TEXT'])[3] | NS-305-FS
+    driver.findElement(By.xpath("//input[@type='NUMBER']")).sendKeys("2003");
+    // type | xpath=(//input[@type='TEXT'])[3] | 3992-3s3232
     driver.findElement(By.xpath("(//input[@type='TEXT'])[3]")).clear();
-    driver.findElement(By.xpath("(//input[@type='TEXT'])[3]")).sendKeys("NS-305-FS");
-    // type | xpath=(//input[@type='TEXT'])[4] | 39393
+    driver.findElement(By.xpath("(//input[@type='TEXT'])[3]")).sendKeys("3992-3s3232");
+    // type | xpath=(//input[@type='TEXT'])[4] | 3232
     driver.findElement(By.xpath("(//input[@type='TEXT'])[4]")).clear();
-    driver.findElement(By.xpath("(//input[@type='TEXT'])[4]")).sendKeys("39393");
-    // type | xpath=(//input[@type='TEXT'])[5] | Sasa
+    driver.findElement(By.xpath("(//input[@type='TEXT'])[4]")).sendKeys("3232");
+    // type | xpath=(//input[@type='TEXT'])[5] | Jovan
     driver.findElement(By.xpath("(//input[@type='TEXT'])[5]")).clear();
-    driver.findElement(By.xpath("(//input[@type='TEXT'])[5]")).sendKeys("Sasa");
-    // type | xpath=(//input[@type='TEXT'])[6] | Momcilovic
+    driver.findElement(By.xpath("(//input[@type='TEXT'])[5]")).sendKeys("Jovan");
+    // type | xpath=(//input[@type='TEXT'])[6] | Jovanovic
     driver.findElement(By.xpath("(//input[@type='TEXT'])[6]")).clear();
-    driver.findElement(By.xpath("(//input[@type='TEXT'])[6]")).sendKeys("Momcilovic");
-    // type | xpath=(//input[@type='NUMBER'])[2] | 9999999999999
+    driver.findElement(By.xpath("(//input[@type='TEXT'])[6]")).sendKeys("Jovanovic");
+    // type | xpath=(//input[@type='NUMBER'])[2] | 8888888888888
     driver.findElement(By.xpath("(//input[@type='NUMBER'])[2]")).clear();
-    driver.findElement(By.xpath("(//input[@type='NUMBER'])[2]")).sendKeys("9999999999999");
+    driver.findElement(By.xpath("(//input[@type='NUMBER'])[2]")).sendKeys("8888888888888");
     // click | css=button.btn.btn-success | 
     driver.findElement(By.cssSelector("button.btn.btn-success")).click();
-    Thread.sleep(3000);
-    // assertText | css=p.bq-tittle | Ukupna cena osiguranja: 850
-    assertEquals("Ukupna cena osiguranja: 850", driver.findElement(By.cssSelector("p.bq-tittle")).getText());
     // click | //p[2]/button | 
     driver.findElement(By.xpath("//p[2]/button")).click();
+    // open | /cgi-bin/webscr?cmd=_express-checkout&token=EC-71L57104JG122713J#/checkout/login | 
+    //driver.get("https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-9VR44003WW154604V#/checkout/login");
+    //driver.get(baseUrl + "/cgi-bin/webscr?cmd=_express-checkout&token=EC-71L57104JG122713J#/checkout/login");
     // assertTitle | PayPal Checkout - Log in | 
-    Thread.sleep(3000);
-    assertEquals("PayPal Checkout - Log in", driver.getTitle());
+    Thread.sleep(12000);
+    //if("PayPal Checkout - Log in".equals(driver.getTitle())){
+        // type | id=password | varajasupak
+        //driver.findElement(By.id("username")).clear();
+        //driver.findElement(By.id("username")).sendKeys("darko-tacic.buyer1@gmail.com");
+        //driver.findElement(By.id("password")).clear();
+        //driver.findElement(By.id("password")).sendKeys("varajasupak");
+        // click | id=btnLogin | 
+        //driver.findElement(By.id("btnLogin")).click();
+    //}
+    // click | id=confirmButtonTop | 
+    //driver.findElement(By.id("confirmButtonTop")).click();
+    //Thread.sleep(1000);
+    // assertTitle | InsuranceWebAppClient | 
+    //assertEquals("InsuranceWebAppClient", driver.getTitle());
+    assertTrue(driver.getTitle().contains("PayPal"));
+    
   }
 
   @After
